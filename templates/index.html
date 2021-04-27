@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{%block title%}
+    Search
+{% endblock%}
+
+{% block main%}
+    <form action="/" method="POST">
+        <div class="container" >
+            {% if session.user_id %}
+                <h3>Tutorials:</h3>
+                <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">Visit W3Schools</a></li>
+                <li><a href="https://learndigital.withgoogle.com/activate/course/web-development-I" target="_blank">Visit Google Actívate</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials#html-tutorials" target="_blank">Visit MDN</a></li>
+                <li><a href="https://www.geeksforgeeks.org/sql-tutorial/" target="_blank">SQL tutorial and more...</a></li>
+                <li><a href="https://www.w3schools.com/tags/att_input_pattern.asp">Requerir que las contraseñas tengan letras, números y/o símbolos</a></li>
+            {% endif %}
+        </div>
+    </form>
+
+{% endblock %}
